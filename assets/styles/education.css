@@ -1,0 +1,198 @@
+.education {
+  background-color: var(--c13);
+  color: var(--c0);
+}
+
+.education .education_container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 120px 20px;
+  gap: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.education_container::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("/assets/images/detalhe.svg") no-repeat center;
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+}
+
+.education_content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.education .subtitulo {
+  color: var(--c14);
+  word-break: break-all;
+  max-width: 5ch;
+  font-size: 8rem;
+}
+
+.education_description {
+  font-size: 1.5rem;
+  max-width: 40ch;
+  color: var(--c6);
+  line-height: 1.33;
+}
+
+.education_description strong {
+  color: var(--c0);
+}
+
+.list_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 20px;
+  border-radius: 4px;
+  background-color: var(--c14);
+}
+
+.item_degree {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: var(--c6);
+}
+
+.item_formation {
+  position: relative;
+  flex: 1;
+  margin-bottom: 30px;
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+
+.item_formation::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  left: -24px;
+  height: 20px;
+  background: linear-gradient(#b6f829, #67dd0a);
+}
+
+.item_institute {
+  justify-self: flex-end;
+  color: var(--c6);
+  font-size: 1.125rem;
+}
+
+.formation_extra {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.formation_extra h3::before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  left: -36px;
+  top: -4px;
+}
+
+.courses_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.courses_container h3 {
+  position: relative;
+  color: var(--c7);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.courses_container h3::before {
+  background: url("/assets/images/cursos.svg") no-repeat center center;
+}
+
+.courses_container li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.125rem;
+}
+
+.courses_container li span {
+  color: var(--c7);
+}
+
+.language_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.language_container h3 {
+  position: relative;
+  color: var(--c7);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.language_container h3::before {
+  background: url("/assets/images/idiomas.svg") no-repeat center center;
+}
+
+.language_container li {
+  font-size: 1.125rem;
+  display: flex;
+  gap: 1ch;
+}
+
+.language_container li span {
+  color: var(--c7);
+}
+
+@media (max-width: 800px) {
+  .education .education_container {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .education .subtitulo {
+    color: var(--c0);
+    font-size: 3rem;
+    text-transform: capitalize;
+    max-width: initial;
+  }
+
+  .education_description {
+    font-size: 1.25rem;
+  }
+
+  .courses_container h3::before,
+  .language_container h3::before {
+    position: initial;
+    margin-bottom: 10px;
+  }
+
+  .language_container {
+    margin-bottom: 20px;
+  }
+}
